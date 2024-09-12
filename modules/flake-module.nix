@@ -32,7 +32,10 @@
     lanzaboote.imports = [ ./lanzaboote ];
     microvm.imports = [ ./microvm ];
     imx8.imports = [ ./reference/hardware/imx8 ];
-    jetpack.imports = [ ./reference/hardware/jetpack ];
+    jetpack.imports = [ 
+      ./reference/hardware/jetpack
+      ./hardware/aarch64-generic
+    ];
     jetpack-microvm.imports = [ ./reference/hardware/jetpack-microvm ];
     polarfire.imports = [ ./reference/hardware/polarfire ];
     reference-appvms.imports = [ ./reference/appvms ];

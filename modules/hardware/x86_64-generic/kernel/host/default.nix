@@ -20,44 +20,6 @@ let
   cfg = config.ghaf.host.kernel.hardening;
 in
 {
-  options.ghaf.host.kernel.hardening = {
-    enable = mkOption {
-      description = "Enable Ghaf Host hardening feature";
-      type = types.bool;
-      default = false;
-    };
-
-    virtualization.enable = mkOption {
-      description = "Enable support for virtualization in the Ghaf Host";
-      type = types.bool;
-      default = false;
-    };
-
-    networking.enable = mkOption {
-      description = "Enable support for networking in the Ghaf Host";
-      type = types.bool;
-      default = false;
-    };
-
-    usb.enable = mkOption {
-      description = "Enable support for USB in the Ghaf Host";
-      type = types.bool;
-      default = false;
-    };
-
-    inputdevices.enable = mkOption {
-      description = "Enable support for input devices in the Ghaf Host";
-      type = types.bool;
-      default = false;
-    };
-
-    debug.enable = mkOption {
-      description = "Enable support for debug features in the Ghaf Host";
-      type = types.bool;
-      default = false;
-    };
-  };
-
   config = mkIf cfg.enable {
     boot.kernelPackages = pkgs.linuxPackagesFor host_hardened_kernel;
     # https://github.com/NixOS/nixpkgs/issues/109280#issuecomment-973636212

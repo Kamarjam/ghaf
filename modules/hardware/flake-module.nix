@@ -6,5 +6,9 @@ _: {
       ./definition.nix
       ./x86_64-generic
     ];
+    hw-aarch64-generic.imports = [
+      ./definition.nix
+      ./aarch64-generic
+    ];
   };
 }
