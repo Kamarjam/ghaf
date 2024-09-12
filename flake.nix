@@ -117,7 +117,7 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
     jetpack-nixos = {
-      url = "github:anduril/jetpack-nixos/793716c1ca29a1be6d9bea84296a933c4acdddc1";
+      url = "github:kamarjam/jetpack-nixos/8357df6aed8e000c61eb4bf13eeee861e980c37d";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

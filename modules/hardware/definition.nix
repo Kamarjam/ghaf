@@ -10,6 +10,51 @@ let
   inherit (lib) mkOption types literalExpression;
 in
 {
+  options.ghaf.host.kernel.hardening = {
+    enable = mkOption {
+      description = "Enable Ghaf Host hardening feature";
+      type = types.bool;
+      default = false;
+    };
+
+    virtualization.enable = mkOption {
+      description = "Enable support for virtualization in the Ghaf Host";
+      type = types.bool;
+      default = false;
+    };
+
+    networking.enable = mkOption {
+      description = "Enable support for networking in the Ghaf Host";
+      type = types.bool;
+      default = false;
+    };
+
+    usb.enable = mkOption {
+      description = "Enable support for USB in the Ghaf Host";
+      type = types.bool;
+      default = false;
+    };
+
+    inputdevices.enable = mkOption {
+      description = "Enable support for input devices in the Ghaf Host";
+      type = types.bool;
+      default = false;
+    };
+
+    debug.enable = mkOption {
+      description = "Enable support for debug features in the Ghaf Host";
+      type = types.bool;
+      default = false;
+    };
+
+    hypervisor.enable = lib.mkOption {
+    description = "Enable Hypervisor hardening feature";
+    type = lib.types.bool;
+    default = false;
+    };
+  };
+
+
   options.ghaf.hardware.definition =
     let
       pciDevSubmodule = types.submodule {
